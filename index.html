@@ -1,49 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Fanore</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #8B4513;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
-        section {
-            padding: 1em;
-        }
-        .menu, .about, .contact {
-            margin: 1em 0;
-        }
-        @media (max-width: 600px) {
-            body {
-                font-size: 14px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Café Fanore</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+    }
+    header {
+      background: #d62828;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      background: #d62828;
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #a71c1c;
+    }
+    section {
+      padding: 2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0.5rem;
+      border-radius: 5px;
+    }
+    .menu-button {
+      background: #d62828;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .menu-content {
+      display: none;
+      background: #f8f8f8;
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav a {
+        display: block;
+      }
+      .gallery {
+        display: block;
+      }
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Café Fanore</h1>
-    </header>
-    <section class="menu">
-        <h2>Our Menu</h2>
-        <p>Explore our selection of freshly brewed coffees, teas, and delicious pastries.</p>
-    </section>
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Nestled in the heart of Fanore, our café is the perfect place to relax and enjoy a great cup of coffee.</p>
-    </section>
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>Visit us in Fanore, County Clare. You can also reach us at info@cafefanore.com.</p>
-    </section>
+
+  <header>
+    <h1>Café Fanore</h1>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Nestled in the heart of Fanore, our café offers a cosy spot to enjoy a warm drink and a bite to eat, surrounded by breathtaking scenery — from the wild Atlantic to limestone rocks and green hills.
+    </p>
+  </section>
+
+  <section id="menu">
+    <h2>Menu</h2>
+    <button class="menu-button" onclick="toggleMenu()">Show/Hide Menu</button>
+    <div class="menu-content" id="menuContent">
+      <ul>
+        <li>Fresh Scones & Cream</li>
+        <li>Seaweed Bread Toasties</li>
+        <li>Locally Roasted Coffee</li>
+        <li>Homemade Soups</li>
+        <li>Ice Cream by the Shore</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Fanore_beach_02.jpg/640px-Fanore_beach_02.jpg" alt="Fanore Beach">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/The_Burren%2C_County_Clare%2C_Ireland.jpg/640px-The_Burren%2C_County_Clare%2C_Ireland.jpg" alt="The Burren rocks">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Irish_Cow_looking.jpg/640px-Irish_Cow_looking.jpg" alt="Local cow">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Beach_near_Fanore%2C_County_Clare%2C_Ireland.jpg/640px-Beach_near_Fanore%2C_County_Clare%2C_Ireland.jpg" alt="Cliffs and sea">
+    </div>
+  </section>
+
+  <section id="visit">
+    <h2>Visit Us</h2>
+    <p>
+      Opening hours: 8:00am – 6:00pm daily  
+      <br>
+      Location: Fanore, County Clare, Ireland
+    </p>
+
+    <div style="margin-top: 1rem;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.631567878275!2d-9.289180884176342!3d53.12324517993908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b7d4573a166e1%3A0x3949d5a08c63dc38!2sFanore%2C%20Co.%20Clare!5e0!3m2!1sen!2sie!4v1720109000000!5m2!1sen!2sie" 
+        width="100%" height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      var content = document.getElementById("menuContent");
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
 </body>
 </html>
